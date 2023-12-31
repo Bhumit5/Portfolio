@@ -1,0 +1,459 @@
+/*~ Imported fonts */
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Philosopher:ital@1&family=Shippori+Mincho+B1:wght@500&display=swap");
+
+:root {
+  /*^ Colors  */
+  --primary-clr: rgb(250, 250, 250);
+  --secondary-clr: rgb(34, 40, 49);
+  --secondary-light-clr: rgb(34, 40, 49, 0.3);
+  --minor-clr: rgb(255, 87, 34);
+  --minor-light-clr: rgb(255 116 20 / 75%);
+  --minor-lighter-clr: rgb(255 116 20 / 55%);
+  --font-clr: rgb(238, 238, 238);
+  --image-bg-clr: rgb(205, 205, 205, 0.4);
+  --white-clr: rgb(255 255 255);
+
+  /*^ Font sizes */
+  --name-font: clamp(22px, 6vw, 60px);
+  --secondary-heading-font: clamp(18px, 4vw, 28px);
+  --regular-font: clamp(14px, 2vw, 24px);
+  --medium-font: clamp(10.5px, 2vw, 20px);
+  --form-font: clamp(10.5px, 2vw, 16px);
+  --cv-font: clamp(9.5px, 2vw, 15.5px);
+
+  /*^ Font families */
+  --greet-line-font-family: "Philosopher", sans-serif;
+  --regular-font-family: "Lora", sans-serif;
+  --name-font-family: "Shippori Mincho B1", serif;
+
+  /*^ Box Shadow */
+  --lighter-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+  --light-shadow: rgba(0, 0, 0, 0.25) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.2) 0px 4px 6px -2px;
+  --dark-shadow: rgba(0, 0, 0, 0.5) 0px 11px 16px -5px,
+    rgba(0, 0, 0, 0.3) 0px 5px 7px -2px;
+
+  /*^ Width  */
+  --logo-width: clamp(1.8em, 2vw, 3em);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--regular-font-family);
+  user-select: none;
+}
+
+body {
+  color: var(--font-clr);
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*~ General Classes  */
+
+/*^ General design class  */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 0.2em;
+}
+
+.outer-container {
+  background-color: var(--primary-clr);
+  position: relative;
+  color: var(--secondary-clr);
+  font-size: var(--regular-font);
+}
+
+.container {
+  width: 85%;
+}
+
+.section-heading {
+  border-left: 0.1em solid var(--minor-clr);
+  padding: 0 0 0.1em 0.2em;
+  margin: 1em 0 0.4em 0;
+  border-radius: 0.1em;
+}
+
+.btn{
+  font-size: var(--cv-font);
+  padding: 0.4em 0.8em;
+  border-radius: 2em;
+  border-color: var(--primary-clr);
+  background-color: rgba(138, 148, 255, 0.274);
+  color: var(--font-clr);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
+
+/*^ General font class  */
+.heading-font {
+  font-family: var(--name-font-family);
+  font-size: var(--name-font);
+  font-weight: bolder;
+}
+
+.special-text {
+  font-size: var(--medium-font);
+  font-family: var(--greet-line-font-family);
+}
+
+/*~ Greeting and First look */
+.video-background {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 80vh;
+  max-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#home,
+#aboutImage {
+  position: relative;
+}
+
+.cv-btn{
+  position: absolute;
+  top: 4%;
+  left: 4%;
+}
+
+.intro {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#myImage img {
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  width: clamp(8.5rem, 12vw, 12rem);
+  aspect-ratio: 1/1;
+  outline: 0.6em solid;
+  animation: borderAnimation 2s linear infinite;
+}
+
+@keyframes borderAnimation {
+  0%,
+  100% {
+    outline-color: rgb(205, 205, 205, 0.32);
+  }
+  50% {
+    outline-color: var(--image-bg-clr);
+  }
+}
+
+/*~ About  */
+#aboutImage img {
+  width: 80%;
+  padding-bottom: 1.5em;
+  filter: drop-shadow(0.3em 0.3em 0.25em var(--secondary-clr));
+}
+
+#name {
+  font-family: var(--greet-line-font-family);
+  margin-bottom: 0.5em;
+}
+
+#abt-style {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 0.5em 0;
+}
+
+#aboutText {
+  word-spacing: 0.3em;
+  text-align: justify;
+}
+
+/*~ Skill Palette  */
+.tech {
+  font-family: var(--regular-font-family);
+  font-weight: 600;
+  margin: 1em 0 0.5em 0;
+  font-size: var(--secondary-heading-font);
+}
+
+.skill-set {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(6em, 1fr)
+  ); /* Adjust min/max width as needed */
+  gap: 0.2em;
+  text-align: center;
+}
+
+.skill-name {
+  margin: 0.2em 0.4em;
+  padding: 0.2em 0.5em;
+  min-width: max-content;
+  background-color: var(--minor-light-clr);
+  border-radius: 0.4em;
+}
+
+/*~ Education */
+.edu-list {
+  text-align: start;
+  font-size: var(--medium-font);
+}
+
+.edu-container {
+  padding: 0.5em 0 0 0.2em;
+  border-radius: 1em;
+  background-color: var(--white-clr);
+  margin: 0.5em 0.3em;
+  box-shadow: var(--lighter-shadow);
+}
+
+.edu-info {
+  padding: 0.8em 0 0.8em 1em;
+  margin: 0 0 0.5em 0.3em;
+  border-left: 0.2em solid var(--minor-clr);
+  border-radius: 0.2em;
+}
+
+.edu-info p {
+  margin-bottom: 0.3em;
+}
+
+/*~ Experience Section */
+#experience-section {
+  padding-bottom: 1.5em;
+}
+
+.exp-img {
+  width: 100%;
+}
+
+.fixed-grid {
+  display: grid;
+  grid-template-columns: minmax(auto, 50%) auto;
+}
+
+.exp-list {
+  font-size: var(--medium-font);
+}
+
+.exp-card {
+  background-color: var(--minor-light-clr);
+  margin-bottom: 1em;
+  padding: 0.8em;
+  border-radius: 0.8em;
+  box-shadow: var(--light-shadow);
+  border: 0.15em solid var(--minor-clr);
+}
+
+.exp-card p {
+  margin-bottom: 0.2em;
+}
+
+/*~ Projects Section */
+.project-container {
+  padding: 2em 0em;
+}
+
+.project-card {
+  position: relative;
+  margin-bottom: 2.5em;
+}
+
+.project-info {
+  width: 80%;
+  height: 90%;
+  position: absolute;
+  border: 0.18em groove var(--secondary-light-clr);
+  transform: rotateZ(-10deg);
+  z-index: 5;
+}
+
+.project-info,
+.visit a {
+  color: transparent;
+  text-decoration: none;
+  transition: all 0.6s ease-in;
+}
+
+.project-info:hover {
+  transform: rotateZ(0deg);
+  background-color: var(--minor-light-clr);
+}
+
+.info-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-size: var(--medium-font);
+  padding-top: 2em;
+}
+
+.info-about {
+  padding: 0.5em 0.8em;
+  border-radius: 0 0.8em 0.8em 0;
+  width: fit-content;
+  transition: all 0.6s ease-in;
+}
+
+.info-about p {
+  margin-bottom: 0.2em;
+}
+
+.visit a {
+  padding: 0.5em 1em;
+  border-radius: 2em 0 0 2em;
+  /* pointer-events: none; */
+}
+
+.visit {
+  position: absolute;
+  width: 100%;
+  bottom: 15%;
+  text-align: end;
+}
+
+.info-content:hover,
+.info-content:hover .visit a {
+  color: var(--secondary-clr) !important;
+}
+
+.info-content:hover .info-about,
+.info-content:hover .visit a {
+  background-color: var(--minor-clr);
+  /* pointer-events: auto; */
+}
+
+.project-img img {
+  padding: 0 1.5em;
+  position: relative;
+  box-shadow: var(--light-shadow);
+  object-fit: contain;
+  aspect-ratio: 5/3;
+  width: 80%;
+}
+
+/*~ Contact */
+.form-container {
+  box-shadow: var(--light-shadow);
+  margin-bottom: 2em;
+  overflow: hidden;
+  border-radius: 0.3em;
+}
+
+.form-component {
+  margin: 1em;
+  width: 85%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form input,
+.form textarea {
+  margin: 0.7em 0;
+  padding: 0.7em 1em;
+  border: none;
+  border-radius: 0.5em;
+  box-shadow: var(--lighter-shadow);
+  font-size: var(--form-font);
+  resize: none;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+}
+
+.contacts {
+  background-color: var(--secondary-clr);
+  color: var(--font-clr);
+  flex-direction: column;
+  padding: 2em 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75%;
+  height: 80%;
+}
+
+.socials{
+  position: relative;
+  bottom: 1%;
+  margin-top:2em;
+  margin-bottom: 1em;
+}
+
+.socials a {
+  position: relative;
+  margin: 0 0.5em;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.2em 0.8em;
+  background-color: var(--minor-clr);
+  border-radius: 1em;
+  box-shadow: var(--dark-shadow);
+}
+
+.socials a:hover {
+  box-shadow: var(--lighter-shadow);
+}
+
+.socials a svg {
+  width: 1.3em;
+  fill: currentColor;
+}
+
+.logo {
+  width: var(--logo-width);
+  margin-right: 1em;
+}
+
+.contact-info .flex{
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+/*~ Media query  */
+@media screen and (min-width: 768px) {
+  #abt-style {
+    display: grid;
+    grid-template-columns: auto 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-2,
+  .fixed-grid {
+    grid-template-columns: auto;
+  }
+}
