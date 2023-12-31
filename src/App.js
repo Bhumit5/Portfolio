@@ -21,6 +21,10 @@ function App() {
           <Contact />
         </div>
       </div>
+      
+      <div className="author center">
+        <p>Made by Bhumit Patel</p>
+      </div>
     </>
   );
 }

@@ -443,6 +443,18 @@ body {
   margin-bottom: 1.5em;
 }
 
+.author{
+  background-color: var(--minor-clr);
+}
+
+.author p{
+  margin: 0.4em ;
+  font-family: var(--greet-line-font-family);
+  font-size: var(--medium-font);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
 /*~ Media query  */
 @media screen and (min-width: 768px) {
   #abt-style {
