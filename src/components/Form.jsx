@@ -27,10 +27,10 @@ export const Form = () => {
   };
 
   return (
-    <form onSubmit={sendEmail} ref={form} class="form">
+    <form onSubmit={sendEmail} ref={form} className="form">
       <input
         required
-        class="input"
+        className="input"
         type="text"
         name="user_name"
         id="contactName"
@@ -40,7 +40,7 @@ export const Form = () => {
 
       <input
         required
-        class="input"
+        className="input"
         type="email"
         name="user_email"
         id="contactEmail"
@@ -50,7 +50,7 @@ export const Form = () => {
 
       <textarea
         required
-        class="input"
+        className="input"
         name="message"
         id="message"
         placeholder="Give your message..."
@@ -58,7 +58,7 @@ export const Form = () => {
         autoCorrect="true"
         autoComplete="off"
       />
-      <input class="send-button" type="submit" value="Send" href="#popup" />
+      <input className="send-button" type="submit" value="Send" href="#popup" />
     </form>
   );
 };

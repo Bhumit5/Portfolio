@@ -9,18 +9,18 @@ export default function Skills() {
           <p className="heading-font section-heading">Tech Palette</p>
         </div>
         <div className="skill-palette">
-          {skills.map((techs) => (
-            <>
+          {skills.map((techs,index) => (
+            <div key={index}>
               <div className="tech">
                 <p>{techs.skill}</p>
               </div>
 
               <div className="skill-set">
-                {techs.skill_set.map((technology) => (
-                  <p className="skill-name">{technology}</p>
+                {techs.skill_set.map((technology,index2) => (
+                  <p key={index2} className="skill-name">{technology}</p>
                 ))}
               </div>
-            </>
+            </div>
           ))}
         </div>
       </div>

@@ -10,8 +10,8 @@ export default function Education() {
         </div>
         <div className="edu-list grid-2">
             {educationList.map((qualification, index) => (
-                <div className="edu-container">
-                    <div key={index} className="edu-info">
+                <div key={index} className="edu-container">
+                    <div className="edu-info">
                         <p className="edu-title">{qualification.title}</p>
                         <p className="edu-marks">{qualification.marks}</p>
                         <p className="edu-time">{qualification.time}</p>

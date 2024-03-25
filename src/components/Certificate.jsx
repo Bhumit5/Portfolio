@@ -14,6 +14,7 @@ export default function Certificate() {
                 <div className="certificate-image">
                   <img src="" alt="" className="certi-img" />
                 </div>
+                
               </div>
             </div>
           </div>
