@@ -1,10 +1,10 @@
 export const projects = [
     {
-        title: "Brown Love",
+        title: "Cafe Bar",
         techs: "HTML, CSS, BOOTSTRAP",
         work: "Design and Development",
-        image: "https://i.ibb.co/XLJMWRk/brown-love.jpg",
-        link: "https://brownlove.netlify.app/",
+        image: "https://i.ibb.co/hRcd7Vz/logo.jpg",
+        link: "https://cafebarb.netlify.com/",
     },
     {
         title: "Juice Template",

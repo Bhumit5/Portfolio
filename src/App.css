@@ -88,7 +88,7 @@ body {
   border-radius: 0.1em;
 }
 
-.btn{
+.btn {
   font-size: var(--cv-font);
   padding: 0.4em 0.8em;
   border-radius: 2em;
@@ -135,11 +135,12 @@ body {
   position: relative;
 }
 
-.cv-btn{
+.cv-btn {
   position: absolute;
   top: 4%;
   left: 4%;
 }
+
 
 .intro {
   position: absolute;
@@ -352,7 +353,7 @@ body {
   position: relative;
   box-shadow: var(--light-shadow);
   object-fit: contain;
-  aspect-ratio: 5/3;
+  aspect-ratio: 3/2;
   width: 80%;
 }
 
@@ -405,10 +406,10 @@ body {
   height: 80%;
 }
 
-.socials{
+.socials {
   position: relative;
   bottom: 1%;
-  margin-top:2em;
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
@@ -437,18 +438,18 @@ body {
   margin-right: 1em;
 }
 
-.contact-info .flex{
+.contact-info .flex {
   display: flex;
   align-items: center;
   margin-bottom: 1.5em;
 }
 
-.author{
+.author {
   background-color: var(--minor-clr);
 }
 
-.author p{
-  margin: 0.4em ;
+.author p {
+  margin: 0.4em;
   font-family: var(--greet-line-font-family);
   font-size: var(--medium-font);
   font-weight: 600;

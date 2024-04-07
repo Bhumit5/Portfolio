@@ -1,7 +1,7 @@
 import React from "react";
 import vi from "../video/bgVideo.mp4";
 import img from "../images/Me.jpg";
-import myCV from "../Documents/Bhumit_Patel_Resume.pdf";
+import myCV from "../Documents/Bhumit_Patel_CV.pdf";
 
 export default function Home() {
   return (

@@ -1,7 +1,12 @@
 export const experience = [
   {
+    role: "Power Platform Intern [Internship]",
+    duration: "Jan 2024 - Present ",
+    place: "IBM SkillsBuild & CSRBOX",
+  },
+  {
     role: "Placement Coordinator",
-    duration: "Year : 2023 [Present]",
+    duration: "Year : Apr 2023 - Mar 2024",
     place: "Government Engineering College, Gandhinagar",
   },
   {

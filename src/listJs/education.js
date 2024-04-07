@@ -1,7 +1,7 @@
 export const educationList = [
   {
     title: "BE [ Computer Engineering ]",
-    marks: "CGPA : 8.70",
+    marks: "CGPA : 8.49",
     place: "Government Engineering College, Gandhinagar",
     time: "Year : 2024 (Current)"
   },
