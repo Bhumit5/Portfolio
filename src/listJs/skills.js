@@ -1,7 +1,7 @@
 export const skills = [
     {
         skill: "Programming Languages",
-        skill_set: ["Java", "Python", "C", "C++"]
+        skill_set: ["Java", "Python", "C", "C++", "PowerFX"]
     },
     {
         skill: "Frontend",
@@ -13,7 +13,7 @@ export const skills = [
     },
     {
         skill: "Database",
-        skill_set: ["SQL"]
+        skill_set: ["SQL", "Sharepoint"]
     },
     {
         skill: "Languages",
@@ -21,6 +21,6 @@ export const skills = [
     },
     {
         skill: "Other",
-        skill_set: ["Github", "Canva", "Figma"]
+        skill_set: ["Github", "Canva", "Figma", "Power Apps", "Power Automate"]
     }
 ]
