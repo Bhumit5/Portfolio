@@ -4,7 +4,7 @@ export const projects = [
         techs: "HTML, CSS, BOOTSTRAP",
         work: "Design and Development",
         image: "https://i.ibb.co/hRcd7Vz/logo.jpg",
-        link: "https://cafebarb.netlify.com/",
+        link: "https://cafebarb.netlify.app/",
     },
     {
         title: "Juice Template",
