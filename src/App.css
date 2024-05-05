@@ -204,7 +204,7 @@ body {
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(6em, 1fr)
+    minmax(7em, 1fr)
   ); /* Adjust min/max width as needed */
   gap: 0.2em;
   text-align: center;
